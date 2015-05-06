@@ -1,0 +1,8 @@
+{% extends 'layouts/base.html' %}
+{% load humanize %}
+{% block title %}Homepage - {{ block.super }}{% endblock %} 
+{% block content %}
+	<h1>Hello World!</h1>
+	<!-- Here is the variable we are passing in -->
+	<p>This is my name: {{ thing|truncatewords:1 }}</p>
+{% endblock %}
