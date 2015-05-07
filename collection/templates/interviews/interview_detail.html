@@ -3,5 +3,11 @@
 {% block content %}
 <h1>{{ interview.name }}</h1>
 <p>{{ interview.description }}</p>
-<a href="{% url 'edit_interview' slug=interview.slug %}">Edit me!</a>
+{% if user == interview.user %}
+	<p>
+		<a href="{% url 'edit_interview' slug=interview.slug %}">
+			Edit me! 
+		</a>
+	</p> 
+{% endif %}
 {% endblock %}
