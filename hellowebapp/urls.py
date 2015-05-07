@@ -13,5 +13,7 @@ urlpatterns = patterns('',
     url(r'^interviews/(?P<slug>[-\w]+)/$', 
     	'collection.views.interview_detail', 
     	name='interview_detail'),
+    url(r'^interviews/(?P<slug>[-\w]+)/edit/$', 
+    	'collection.views.edit_interview', name='edit_interview'),
     url(r'^admin/', include(admin.site.urls)),
 )
