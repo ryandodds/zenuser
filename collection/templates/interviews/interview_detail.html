@@ -1,0 +1,9 @@
+{% extends 'layouts/base.html' %}
+{% load humanize %}
+{% block title %}Homepage - {{ block.super }}{% endblock %} 
+{% block content %}
+{% for interview in interviews %}
+<h2>{{ interview.name }}</h2>
+<p>{{ interview.description }}</p>
+{% endfor %}
+{% endblock %}
