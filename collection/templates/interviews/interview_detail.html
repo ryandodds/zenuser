@@ -1,9 +1,7 @@
 {% extends 'layouts/base.html' %}
-{% load humanize %}
-{% block title %}Homepage - {{ block.super }}{% endblock %} 
+{% block title %}{{ interview.name }} - {{ block.super }}{% endblock %} 
 {% block content %}
-{% for interview in interviews %}
-<h2>{{ interview.name }}</h2>
+<h1>{{ interview.name }}</h1>
 <p>{{ interview.description }}</p>
-{% endfor %}
+<a href="{% url 'edit_interview' slug=interview.slug %}">Edit me!</a>
 {% endblock %}
