@@ -5,7 +5,7 @@ from django.contrib.auth.views import password_reset, password_reset_done, passw
 from django.views.generic import TemplateView
 
 urlpatterns = patterns('',
-    url(r'^$', 'collection.views.index', name='home'),
+    url(r'^$', 'collection.views.index', name='interviews'),
     url(r'^about/$', TemplateView.as_view(template_name='about.html'), name='about'), 
     url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
     
