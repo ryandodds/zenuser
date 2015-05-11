@@ -2,6 +2,10 @@
 {% block title %}Homepage - {{ block.super }}{% endblock %} 
 
 {% block content %}
+	<a href="{% url 'registration_create_interview' %}">
+	<div id="add_interview">
+		<p>Add Inverview</p>
+	</div>
 {% for interview in interviews %}
 	<a href="{% url 'interview_detail' slug=interview.slug %}">
 		<div id="interview_list">

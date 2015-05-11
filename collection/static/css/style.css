@@ -1,6 +1,10 @@
 
 header {
-	border-bottom: 1px solid #a1a1a1;
+	background-color: #A5B9B9;
+	float: left;
+	padding: 5px;
+	width: 100%;
+	margin-bottom: 30px;
 }
 
 
@@ -25,12 +29,7 @@ nav li {
 nav a {
 	font-weight: normal;
 	padding: 15px 10px;
-}
-
-#logo {
-	float: left;
-	text-align: left;
-
+	color: white;
 }
 
 .wrap {
@@ -53,13 +52,34 @@ nav a {
 
 
 #interview_list {
-		border: 1px solid grey;
+		border: 1px solid #B3B3B3;
 		border-radius: 5px;
 		padding: 20px;
 		margin-bottom: 30px;
-		text-decoration: none;
+		color: #000333;
 	}
 
+#interview_list:hover {
+  background: #F2F2F2;
+  text-decoration: none;
+}
+
+#add_interview {
+  border-radius: 0px;
+  font-family: Helvetica;
+  margin-bottom: 40px;
+  color: #ffffff;
+  font-size: 25px;
+  text-align: center;
+  background: #34a5d9;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+#add_interview:hover {
+  background: #9ac9e6;
+  text-decoration: none;
+}
 
 
 
