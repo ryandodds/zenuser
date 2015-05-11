@@ -5,6 +5,7 @@
 	<title>
 		{% block title %}My Hello Web App Project{% endblock %}
 	</title>
+	<meta charset="utf-8">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -12,27 +13,35 @@
 </head> 
 <body>
 	<header>
-		<h1>Zenuser</h1> 
-		<nav>
-			<ul>
-				<li><a href="{% url 'interviews' %}">Interviews</a></li> 
-				<li><a href="{% url 'about' %}">About</a></li> 
-				<li><a href="{% url 'contact' %}">Contact</a></li>
-				 {% if user.is_authenticated %}
-                <li>
-                    <a href="{% url 'auth_logout' %}">Logout</a>
-                </li>
-                {% else %}
-                <li>
-                    <a href="{% url 'auth_login' %}">Login</a>
-                </li>
-                <li>
-                    <a href="{% url 'registration_register'%}">Register</a>
-                </li>
-                {% endif %}
-			</ul> 
-		</nav>
+		<div class="wrap">	
+	 		<div id="header">
+               <nav>
+					<ul>
+						<li><a href="{% url 'interviews' %}">Interviews</a></li> 
+						<li><a href="{% url 'about' %}">About</a></li> 
+						<li><a href="{% url 'contact' %}">Contact</a></li>
+					 	{% if user.is_authenticated %}
+               			<li><a href="{% url 'auth_logout' %}">Logout</a></li>
+                		{% else %}
+                		<li><a href="{% url 'auth_login' %}">Login</a></li>
+						<li><a href="{% url 'registration_register'%}">Register</a></li>
+                		{% endif %}
+					</ul> 
+				</nav>
+          	</div>
+     	</div>	
 	</header>
+	<div id="body">
+		<div class="wrap">
 	{% block content %}{% endblock %}
-	{% block footer %}{% endblock %}
+		</div>
+	</div>
+	<footer>
+	   <div id="footer">
+          <div class="wrap">
+               <p>This would be your footer content!</p>
+          </div>
+     </div>
+     </footer>
+	{% block footer %}{% endblock %}	
 </body> </html>
