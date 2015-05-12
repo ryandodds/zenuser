@@ -3,11 +3,14 @@
 <html>
 <head>
 	<title>
-		{% block title %}My Hello Web App Project{% endblock %}
+		{% block title %}Turn User Interviews in Product Insight{% endblock %}
 	</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Khula:400,300,600' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 	{% block header %}{% endblock %}
 </head> 
@@ -15,18 +18,19 @@
 	<header>
 		<div class="wrap">	
 	 		<div id="header">
-               <nav>
-					<ul>
+				<nav>
+					  <ul>
 						<li><a href="{% url 'interviews' %}">Interviews</a></li> 
 						<li><a href="{% url 'about' %}">About</a></li> 
 						<li><a href="{% url 'contact' %}">Contact</a></li>
 					 	{% if user.is_authenticated %}
-               			<li><a href="{% url 'auth_logout' %}">Logout</a></li>
+               			<li ><a href="{% url 'auth_logout' %}">Logout</a></li>
                 		{% else %}
                 		<li><a href="{% url 'auth_login' %}">Login</a></li>
 						<li><a href="{% url 'registration_register'%}">Register</a></li>
                 		{% endif %}
-					</ul> 
+					  </ul> 
+					</div>  
 				</nav>
           	</div>
      	</div>	

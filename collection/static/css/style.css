@@ -1,6 +1,13 @@
+* {
+	font-family: 'Khula', sans-serif;
+}
+
+/**************************
+	Global Header
+	***********************/
 
 header {
-	background-color: #A5B9B9;
+	background-color: #A5B9C6;
 	float: left;
 	padding: 5px;
 	width: 100%;
@@ -30,6 +37,7 @@ nav a {
 	font-weight: normal;
 	padding: 15px 10px;
 	color: white;
+	text-decoration: none;
 }
 
 .wrap {
@@ -39,7 +47,7 @@ nav a {
 		padding: 0 5%;
 	}
 
-	#body, #header, #footer {
+	#body, #header {
 		position: relative;
 		width:100%;
 		float:left;
@@ -47,37 +55,27 @@ nav a {
 
 
 /**************************
-	Home - Interview list
+	Home - Interviews
 	***********************/
 
-
-#interview_list {
-		border: 1px solid #B3B3B3;
-		border-radius: 5px;
-		padding: 20px;
-		margin-bottom: 30px;
-		color: #000333;
-	}
-
-#interview_list:hover {
-  background: #F2F2F2;
-  text-decoration: none;
-}
-
 #add_interview {
-  border-radius: 0px;
-  font-family: Helvetica;
-  margin-bottom: 40px;
-  color: #ffffff;
-  font-size: 25px;
-  text-align: center;
-  background: #34a5d9;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
+	text-decoration: none;
+  	margin-bottom: 40px;
+  	text-align: center;
+  	padding: 20px 0 5px 0;
+  	vertical-align: middle;
 }
 
-#add_interview:hover {
-  background: #9ac9e6;
+.interview_list {
+	border: 1px solid #B3B3B3;
+	border-radius: 5px;
+	padding: 20px;
+	margin-bottom: 30px;
+	color: #000333;
+}
+
+.interview_list:hover {
+  background: #F2F2F2;
   text-decoration: none;
 }
 
