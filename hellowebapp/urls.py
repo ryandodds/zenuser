@@ -6,8 +6,8 @@ from django.views.generic import TemplateView
 
 urlpatterns = patterns('',
     url(r'^$', 'collection.views.index', name='interviews'),
-    url(r'^about/$', TemplateView.as_view(template_name='about.html'), name='about'), 
-    url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
+    url(r'^objectives/$', TemplateView.as_view(template_name='objectives.html'), name='objectives'), 
+    url(r'^debriefs/$', TemplateView.as_view(template_name='debriefs.html'), name='debriefs'),
     
     url(r'^interviews/(?P<slug>[-\w]+)/$', 'collection.views.interview_detail', name='interview_detail'),
     url(r'^interviews/(?P<slug>[-\w]+)/edit/$', 'collection.views.edit_interview', name='edit_interview'),

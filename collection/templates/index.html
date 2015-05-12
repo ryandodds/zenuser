@@ -4,7 +4,8 @@
 {% block content %}
 	<a href="{% url 'registration_create_interview' %}">
 	<div id="add_interview">
-		<button type="button" class="btn btn-default btn-lg">Add Interview</button>
+		<button type="button" class="btn btn-default btn-lg">
+			<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Interview</button>
 	</div>
 {% for interview in interviews %}
 	<a href="{% url 'interview_detail' slug=interview.slug %}">

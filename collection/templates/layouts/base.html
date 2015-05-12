@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 	<!-- Latest compiled and minified JavaScript -->
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Khula:400,300,600' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -16,24 +17,32 @@
 </head> 
 <body>
 	<header>
-		<div class="wrap">	
-	 		<div id="header">
-				<nav>
-					  <ul>
-						<li><a href="{% url 'interviews' %}">Interviews</a></li> 
-						<li><a href="{% url 'about' %}">About</a></li> 
-						<li><a href="{% url 'contact' %}">Contact</a></li>
-					 	{% if user.is_authenticated %}
-               			<li ><a href="{% url 'auth_logout' %}">Logout</a></li>
-                		{% else %}
-                		<li><a href="{% url 'auth_login' %}">Login</a></li>
-						<li><a href="{% url 'registration_register'%}">Register</a></li>
-                		{% endif %}
-					  </ul> 
-					</div>  
-				</nav>
-          	</div>
-     	</div>	
+		<img class="app-logo" src="../static/images/zenuser_logo.png" href="#" alt="Zenuser">
+			<div class="wrap">	
+	 			<div id="header">
+					<nav>
+					  	<ul>
+							<li><a href="{% url 'interviews' %}">Interviews</a></li> 
+							<li><a href="{% url 'objectives' %}">Objectives</a></li> 
+							<li><a href="{% url 'debriefs' %}">Debriefs</a></li>
+					  	</ul>
+					</nav>
+          		</div>
+     		</div>	
+     	<div class="dropdown">
+  			<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"> 
+  				Username
+    			<span class="caret"></span>
+  					</button>
+  						<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+  							{% if user.is_authenticated %}
+    						<li role="presentation"><a role="menuitem" tabindex="-1" href="{% url 'auth_logout' %}">Logout</a></li>
+    						{% else %}
+    						<li role="presentation"><a role="menuitem" tabindex="-1" href="{% url 'auth_login' %}">Login</a></li>
+    						<li role="presentation"><a role="menuitem" tabindex="-1" href="{% url 'registration_register'%}">Register</a></li>
+    						{% endif %}
+  						</ul>
+		</div>
 	</header>
 	<div id="body">
 		<div class="wrap">
