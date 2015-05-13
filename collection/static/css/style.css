@@ -46,7 +46,6 @@ header {
 	float: left;
 	padding: 5px;
 	width: 100%;
-	margin-bottom: 25px;
 	border-bottom: 3px solid lightgrey;
 }
 
@@ -105,6 +104,10 @@ img.app-logo {
 	float:left;
 }
 
+#body {
+	background-color: #F8F8F8;
+}
+
 
 .dropdown {
 	float: right;
@@ -126,19 +129,24 @@ img.app-logo {
   	padding: 20px 0 5px 0;
   	vertical-align: middle;
   	border-radius: none;
-  	@btn-*-bg: none;
+}
+
+.btn {
+	background-color: orange;
 }
 
 #interview_toggle {
 	background-color: lightgrey;
+	font-size: 20px;
 }
 
 .interview_list {
-	border: 1px solid #B3B3B3;
-	border-radius: 5px;
+	border: 1px solid lightgrey;
+	border-radius: none;
 	padding: 20px;
 	margin-bottom: 30px;
 	color: #000333;
+	background-color: #FFF;
 }
 
 .interview_list:hover {
@@ -152,8 +160,9 @@ img.app-logo {
 }
 
 
-
-
+/**************************
+	Create Interview
+	***********************/
 
 
 

@@ -62,6 +62,7 @@ def create_interview(request):
         if form.is_valid():
             name = form.cleaned_data['name']
             description = form.cleaned_data['description']
+            due_date = form.cleaned_data['due_date']
             # create the slug from our name
             slug = slugify(name)
 
@@ -69,6 +70,7 @@ def create_interview(request):
             interview = Interview.objects.create(
                 name=name,
                 description=description,
+                due_date=due_date,
                 slug=slug,
                 user=user,
             )

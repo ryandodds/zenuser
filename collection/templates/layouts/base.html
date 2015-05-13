@@ -17,7 +17,7 @@
 </head> 
 <body>
 	<header>
-		<img class="app-logo" src="../static/images/zenuser_logo.png" href="#" alt="Zenuser">
+		<img class="app-logo" src="/static/images/zenuser_logo.png" href="#" alt="Zenuser">
 			<div class="wrap">	
 	 			<div id="header">
 					<nav>
@@ -31,7 +31,7 @@
      		</div>	
      	<div class="dropdown">
   			<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"> 
-  				Username
+  				{{ user.username }}
     			<span class="caret"></span>
   					</button>
   						<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
