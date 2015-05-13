@@ -76,7 +76,7 @@ nav a {
 }
 
 a, nav a:hover {
-	text-decoration: underline;
+	text-decoration: none;
 	color: white;
 }
 
@@ -86,9 +86,10 @@ a, a:hover {
 
 img.app-logo {
 	float: left;
-	vertical-align: middle;
+	max-width: 12%;
+	max-height: 12%;
 	margin-top: 20px;
-	margin-left: 30px;
+	margin-left: 20px;
 }
 
 .wrap {
@@ -129,10 +130,6 @@ img.app-logo {
   	padding: 20px 0 5px 0;
   	vertical-align: middle;
   	border-radius: none;
-}
-
-.btn {
-	background-color: orange;
 }
 
 #interview_toggle {
