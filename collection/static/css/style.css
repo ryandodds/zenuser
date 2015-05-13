@@ -125,6 +125,7 @@ img.app-logo {
 
 #add_interview {
 	text-decoration: none;
+	font-weight: bold;
   	margin-bottom: 40px;
   	text-align: center;
   	padding: 20px 0 5px 0;
