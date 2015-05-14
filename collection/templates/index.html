@@ -7,6 +7,40 @@
 			Add Interview
 		</a>
 	</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Add Interview
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Create your user interview</h4>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+  			<form role="form">
+    			<div class="form-group">
+      				<label for="email">Email:</label>
+      				<input type="email" class="form-control" id="email" placeholder="Enter email">
+    			</div>
+   				 <div class="form-group">
+      				<label for="pwd">Password:</label>
+      				<input type="password" class="form-control" id="pwd" placeholder="Enter password">
+    			</div>
+  			</form>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-lg">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
 	
 	<div id="interview_toggle">
 		<ul class="nav nav-pills nav-justified">

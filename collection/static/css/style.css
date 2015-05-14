@@ -136,10 +136,12 @@ img.app-logo {
 #interview_toggle {
 	background-color: lightgrey;
 	font-size: 20px;
+	border-radius: none;
 }
 
 .interview_list {
 	border: 1px solid lightgrey;
+	border-bottom: 3px solid lightgrey;
 	border-radius: none;
 	padding: 20px;
 	margin-bottom: 30px;
@@ -161,7 +163,6 @@ img.app-logo {
 /**************************
 	Create Interview
 	***********************/
-
 
 
 
